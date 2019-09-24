@@ -1,5 +1,4 @@
 虚拟dom
-truecomponent
 跨域 cors的过程
 移动端适配
 call，apply，bind
@@ -10,3 +9,5 @@ const，var，let
 手写promise
 表单联动
 内存回收机制
+
+truecomponent
