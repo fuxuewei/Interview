@@ -1,10 +1,12 @@
-表单联动
 虚拟dom
-受控组件，非受控组件
-手写promise
 truecomponent
 跨域 cors的过程
 移动端适配
-内存回收机制
 call，apply，bind
 const，var，let
+
+
+受控组件，非受控组件
+手写promise
+表单联动
+内存回收机制
