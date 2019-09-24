@@ -9,5 +9,4 @@ const，var，let
 手写promise
 表单联动
 内存回收机制
-
-truecomponent
+pureComponent
