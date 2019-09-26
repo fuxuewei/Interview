@@ -199,8 +199,12 @@
    
    Vue.nextTick()：用于延迟执行一段代码，它接受2个参数（回调函数和执行回调函数的上下文环境），如果没有提供回调函数，那么将返回promise对象。
    在Vue生命周期的 created() 进行的 DOM 操作一定要放在 Vue.nextTick() 的回调函数中
-   
-   
+ 
+# vue3 ts(https://juejin.im/post/5d0259f2518825405d15ae62)
+  shims-tsx.d.ts，允许你以.tsx结尾的文件，在Vue项目中编写jsx代码
+  shims-vue.d.ts  主要用于 TypeScript 识别.vue 文件，Ts默认并不支持导入 vue 文件，这个文件告诉ts 导入.vue 文件都按VueConstructor<Vue>处理。
+  
+
 # Vuex（Vue状态管理）
   核心：仓库store，包含着你的应用中大部分的状态 (state)。
   
