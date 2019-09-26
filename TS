@@ -14,3 +14,57 @@
 function isFish(pet: Fish | Bird): pet is Fish {
     return (<Fish>pet).swim !== undefined;
 }
+
+
+  Typescript与Javascript共享相同的基本类型，但有一些额外的类型。
+    元组 Tuple: 要以正确的顺序预定义数据类型
+      const messyArray = [' something', 2, true, undefined, null];
+      const tuple: [number, string, string] = [24, "Indrek" , "Lasn"]
+    枚举 enum:
+      enum Color {Red = 1, Green = 2, Blue = 4}
+      let c: Color = Color.Green;
+      let colorName: string = Color[2];
+    Any 与Void:
+      在Ts中，你必须在函数中定义返回类型,否则会报错；将其返回值定义为void,将无法 return
+  
+ 自定义类型：Interface（接口） vs Type alias（类型别名）
+  相同点：都可以用来描述一个对象或函数；都允许拓展（extends）
+  不同点：
+    type 可以声明基本类型别名，联合类型，元组等类型：type Name = string
+    type 语句中还可以使用 typeof获取实例的 类型进行赋值：type B = typeof div
+    interface 能够声明合并：
+    
+      interface User {
+        name: string
+        age: number
+      }
+      interface User {
+        sex: string
+      }
+    interface 有可选属性和只读属性：
+      interface Person {
+        readonly loginName: string;
+        name: string;
+        age?: number;
+        gender?: number;
+      }
+  实现与继承：implements vs extends
+    
+    interface IDeveloper {
+       name: string;
+       age?: number;
+    }
+    // OK
+    class dev implements IDeveloper {
+        name = 'Alex';
+        age = 20;
+    }
+    // OK
+    class dev2 implements IDeveloper {
+        name = 'Alex';
+    }
+    // Error
+    class dev3 implements IDeveloper {
+        name = 'Alex';
+        age = '9';
+    }
